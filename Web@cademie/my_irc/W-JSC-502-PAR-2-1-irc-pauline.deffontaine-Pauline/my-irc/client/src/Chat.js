@@ -48,6 +48,7 @@ const Chat = () => {
 
     // console.log(storedNames)
 
+    // localStorage.removeItem("user");
     // console.log(users)
 
     useEffect(() => {
@@ -427,7 +428,7 @@ const Chat = () => {
                         </div>
                         {ListChannel.map((room, index) => (
                             <div key={index} className="btn-channel" onClick={() => Channel(room.channel)}>
-                                <p>{room.channel}</p>
+                                <p> {room.channel}</p>
                             </div>
                         ))}
                     </div>
@@ -436,7 +437,7 @@ const Chat = () => {
                         <ul>
                             {HistoriqueUsers.map((user, index) => (
                                 user.channel === channel
-                                    ? (<li key={index}>{user.username}</li>)
+                                    ? (<li key={index} >{user.username}</li>)
                                     : null
                             ))}
                         </ul>
@@ -474,22 +475,11 @@ const Chat = () => {
                         {messages.map((message, index) => (
                             message.channel === channel ? (
                                 message.username === userName ? (
-                                    <div key={index} className="message own-message">
-                                        <div className="message-content">
-                                            <p className="message-text">{message.text}</p>
-                                        </div>
-                                    </div>
+                                    <MessageMe key={index} username={message.username} text={message.text} />
                                 ) : message.username === '[LOGS]' ? (
-                                    <div key={index} className="message logs">
-                                        <p className="message-text">{message.text}</p>
-                                    </div>
+                                    <MessageLogs key={index} username={message.username} text={message.text} />
                                 ) : (
-                                    <div key={index} className="message received-message">
-                                        <div className="message-content">
-                                            <p className="message-username">{message.username}</p>
-                                            <p className="message-text">{message.text}</p>
-                                        </div>
-                                    </div>
+                                    <Message key={index} username={message.username} text={message.text} />
                                 )
                             ) : null
                         ))}
@@ -502,7 +492,6 @@ const Chat = () => {
                 </div>
             </>
         );
-        
     }
 };
 
