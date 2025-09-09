@@ -1,0 +1,47 @@
+{
+  "name": "w-web-403-par-4-1-mybot-louis.le-gouge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "seed": "tsx prisma/seed.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechWebAcademiePromo2025/W-WEB-403-PAR-4-1-mybot-louis-le-gouge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechWebAcademiePromo2025/W-WEB-403-PAR-4-1-mybot-louis-le-gouge/issues"
+  },
+  "homepage": "https://github.com/EpitechWebAcademiePromo2025/W-WEB-403-PAR-4-1-mybot-louis-le-gouge#readme",
+  "description": "Backend Node/Express/TypeScript with Prisma (SQLite) powering a multi-chat advisor for pet adoption. Works with LM Studio (OpenAI-compatible API).",
+  "type": "module",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.14.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.11.1",
+    "@prisma/client": "^6.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "openai": "^5.12.2",
+    "zod": "^3.25.76"
+  }
+}
