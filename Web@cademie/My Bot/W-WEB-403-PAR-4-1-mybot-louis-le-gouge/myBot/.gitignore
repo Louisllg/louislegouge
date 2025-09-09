@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Env files (backend and frontend)
+.env
+.env.*
+frontend/.env
+frontend/.env.*
+
+# Build outputs
+/dist/
+/frontend/dist/
+.vite/
+frontend/.vite/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Prisma / SQLite
+/prisma/dev.db
+/prisma/dev.db-journal
+/prisma/*.db
+/prisma/*.db-journal
+/prisma/migrations/
+
+# Uploaded files
+/uploads/
+
+# OS files
+.DS_Store
+
+# Optional: ignore backend API entirely (uncomment if you only want frontend)
+# /src/
+# /prisma/ 
